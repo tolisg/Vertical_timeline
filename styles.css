@@ -1,0 +1,84 @@
+
+/* -------------------------------------
+ * vertical timeline
+ * ------------------------------------- */
+
+.vertical-timeline ul {
+  list-style: none;
+  margin: 0 0 0 90px;
+  padding-left: 30px;
+  border-left: 4px solid lightgrey;
+}
+.vertical-timeline li{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.vertical-timeline li:last-child{
+	margin-bottom: 0px;
+}
+
+.vertical-timeline .date {
+  left: -120px;
+  position: absolute;
+  top: calc(50% - 20px);
+}
+
+.vertical-timeline .circle {
+  top: calc(50% - 8px);
+  left: -40px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid #ab0d25;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.vertical-timeline .content {
+  border-color: #ab0d25;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5em;
+}
+
+.vertical-timeline .inactive .content{
+   border-color: transparent;
+}
+
+.vertical-timeline .inactive .content h4:hover{
+  color: #ab0d25;
+  cursor: pointer;
+}
+
+.vertical-timeline .inactive .comments{
+  display: none;
+}
+
+.vertical-timeline .active .circle {
+  background: #ab0d25;
+}
+
+.vertical-timeline .active .content {
+  padding-left: 10px;
+  transform: translateX(-5px);
+  transition:0.3s;
+}
+
+.vertical-timeline .content:before, .content:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  right: 100%;
+}
+.vertical-timeline .content:before {
+  border-right-color: inherit;
+  border-width: 10px;
+  top: 50%;
+  margin-top: -11px;
+}
+
+.well {background-color: #f5f5f5; border: 1px solid #e3e3e3; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset; margin-bottom: 20px; min-height: 20px; padding: 19px;}
